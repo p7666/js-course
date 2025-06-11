@@ -9,8 +9,8 @@ const isLoggedIn = false
 const outsideTemp = null
 let userEmail;
 
-const id = symbol('123')
-const anotherId = symbol('123')
+const id = Symbol('123')
+const anotherId = Symbol('123')
 
 console.log(id === anotherId);
 
@@ -32,3 +32,21 @@ const myFunction = function(){
     console.log("Hello World");
     
 }
+
+
+let myYoutubename = "javascriptWorld"
+let anothername = myYoutubename
+anothername = "chaiaurcode"
+console.log(myYoutubename)
+console.log(anothername)
+
+let userOne = {
+    email : "user@google.com",
+    upi : "user@ybl"
+}
+let userTwo = userOne
+
+userTwo.email = "hitesh@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
