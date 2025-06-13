@@ -36,5 +36,11 @@ const user = {
 // const addTwo = (num1 , num2) => {
 //     return num1+num2
 // }
-const addTwo = (num1 , num2) => num1+num2     //implicite arrow function
-console.log(addTwo(3,4));
+// const addTwo = (num1 , num2) => num1+num2     //implicite arrow function
+// const addTwo = (num1 , num2) => (num1+num2)    
+const addTwo = (num1 , num2) => ({username : "hitesh"})      // to return object   
+
+console.log(addTwo(3,4))
+
+const myArray = [2,5,3,7,8]
+
