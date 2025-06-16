@@ -1,4 +1,5 @@
 # Projects related to DOM
+<!-- the below code is write and run on the stackblitz.com -->
 
 ## project link
 [click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
@@ -177,6 +178,70 @@ function newGame() {
     playGame = true;
   });
 }
+
+```
+
+## Project 5 solution code 
+``` javascript 
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+    <div class='color'>
+    <table>
+    <tr>
+      <th>Key</th>
+      <th>Keycode</th> 
+      <th>Code</th>
+    </tr>
+    <tr>
+      <td>${e.key === ' ' ? 'Space' : e.key}</td>
+      <td>${e.keyCode}</td> 
+      <td>${e.code}</td>
+    </tr>
+    
+  </table>
+    </div>
+  `;
+});
+
+
+
+```
+
+## Project 6 solution code
+``` javscript 
+
+//generate a random color
+
+const randomColor = function(){
+  const hex = '123456789ABCDEF';
+  let color = '#';
+  for(let i=0; i<6;i++){
+    color += hex[Math.floor(Math.random()*16)];
+  }
+  return color;
+};
+
+// console.log(randomColor())
+let intervalId
+const startChangingColor = function(){
+  if(!intervalId){
+    intervalId = setInterval(changeBgColor , 1000)
+  }
+  
+
+  function changeBgColor(){
+    document.body.style.backgroundColor = randomColor();
+  }
+  
+}
+const stopChangingColor = function(){
+  clearInterval(intervalId)
+  intervalId = null;
+}
+const start = document.querySelector('#start').addEventListener('click',startChangingColor)
+const stop = document.querySelector('#stop').addEventListener('click',stopChangingColor)
 
 
 ```
